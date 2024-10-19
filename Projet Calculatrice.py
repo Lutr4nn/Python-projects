@@ -13,16 +13,16 @@ def main():
     
     match opération:
          case '+':
-              opération = number1 + number2
+              result = number1 + number2
          case '-':
-              opération = number1 - number2
+              result = number1 - number2
          case '*':
-              opération = number1 * number2
+              result = number1 * number2
          case '/':
              if number2 == 0:
                  print('You cannot divide by zero')
              else:
-               opération = number1 / number2
+               result = number1 / number2
          case _:
               print('Please use an operative symbol')
     print(f'The result of the operation is: {result}')        
