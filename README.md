@@ -16,6 +16,7 @@ The primary goal of this repository is to:
 1. **Code César Décode**: A simple Python program that encrypts and decrypts messages using the Caesar cipher.
 2. **Calculator Project**: A simple calculator program that performs basic arithmetic operations.
 3. **Small game**: A simple game that generates a random number and asks the user to guess it in 10 attempts.
+4. **Awakening**: A simple Awakening with Crazy Frog for Wake-up alarm.
 
 ## Getting Started
 
