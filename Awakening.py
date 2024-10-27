@@ -3,10 +3,10 @@ import time
 import webbrowser
 
 class Awakening():
-        def __init__(self,hour,minute):
+        def __init__(self,hour,minute,is_alarm_set = False):
                 self.hour = hour
                 self.minute = minute
-                self.is_alarm_set = False
+                self.is_alarm_set = is_alarm_set
                 
         def alarm(self):
                 while True:
