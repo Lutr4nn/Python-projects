@@ -1,3 +1,6 @@
+#Make by Lutr4nn
+# -*- coding: utf-8 -*-
+
 def decalage(caractere_origine, key):
     alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     if caractere_origine == ' ':

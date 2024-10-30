@@ -1,3 +1,6 @@
+#Make by Lutr4nn
+# -*- coding: utf-8 -*-
+
 import datetime
 import time
 import webbrowser

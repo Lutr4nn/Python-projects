@@ -1,3 +1,6 @@
+#Make by Lutr4nn
+# -*- coding: utf-8 -*-
+
 def main():
     number1 = input('Enter your first number :')
     opération = input("What operation do you want to do? ['+', '-', '*' ou '/']")
