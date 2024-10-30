@@ -1,7 +1,4 @@
 #Make by Lutr4nn
-#Date: 21/10/2024
-#Version: 1.0
-#user/bin/python3
 # -*- coding: utf-8 -*-
 
 import random
