@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denezo</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Denezo</h1>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </header>
+
+      <section class="form-section">
+        <h2>Add a new task</h2>
+        <form
+          action="{{ url_for('add_task') }}"
+          method="post"
+          class="data-form"
+        >
+          <input type="text" name="title" placeholder="Title" required />
+          <input
+            type="text"
+            name="description"
+            placeholder="What is your task"
+            required
+          />
+          <button type="submit" class="add-button">Add to MySQL</button>
+        </form>
+      </section>
+
+      <section class="items-section">
+        <h2>Stored Items</h2>
+        <ul class="items-list">
+          {% for task in tasks %}
+          <li class="item">
+            <span>{{ task.title }} - {{ task.description }}</span>
+            <div class="task-buttons">
+              <form
+                action="{{ url_for('delete_task', task_id=task.id) }}"
+                method="post"
+                style="display: inline"
+              >
+                <button type="submit" class="delete-button">Delete</button>
+              </form>
+              <button
+                type="button"
+                class="update-button"
+                onclick="showUpdateForm('{{ task.id }}')"
+              >
+                Update
+              </button>
+            </div>
+            <div
+              id="update-form-{{ task.id }}"
+              class="update-form"
+              style="display: none; margin-top: 5px"
+            >
+              <form
+                action="{{ url_for('update_task', task_id=task.id) }}"
+                method="post"
+              >
+                <input type="hidden" name="task_id" value="{{ task.id }}" />
+                <input
+                  type="text"
+                  name="title"
+                  value="{{ task.title }}"
+                  required
+                />
+                <input
+                  type="text"
+                  name="description"
+                  value="{{ task.description }}"
+                  required
+                />
+                <button type="submit" class="update-button">
+                  Submit Update
+                </button>
+              </form>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      function showUpdateForm(id) {
+        document.querySelectorAll(".update-form").forEach((form) => {
+          form.style.display = "none";
+        });
+        document.getElementById("update-form-" + id).style.display = "block";
+      }
+    </script>
+
+    <script
+      type="module"
+      src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+  </body>
+</html>
