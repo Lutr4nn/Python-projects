@@ -31,10 +31,6 @@ To get started with any of the projects, follow these steps:
    ```bash
    cd Python-Projects/Project-Name
    ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 4. Run the project:
    ```bash
    python main.py
