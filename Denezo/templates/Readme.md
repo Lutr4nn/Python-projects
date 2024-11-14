@@ -23,6 +23,11 @@ This project is designed to help me learn Flask, a micro web framework for Pytho
    flask run
    ```
 2. Open your web browser and go to `http://127.0.0.1:5000` to access the to-do list application.
+   
+3. Create a DB with XAMPP
+  
+   ![image](https://github.com/user-attachments/assets/507942a8-6455-42ee-b2d3-e858f14eea64)
+
 
 ## Learning Outcomes
 
